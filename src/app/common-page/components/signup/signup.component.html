@@ -1,0 +1,43 @@
+<div class="title">
+    <h1>创建账户</h1>
+</div>
+<form nz-form [formGroup]="signupForm" class="login-form">
+    <nz-form-item>
+        <nz-form-control nzErrorTip="Please input your username!">
+            <nz-input-group nzPrefixIcon="user">
+                <input type="text" nzSize="large" nz-input formControlName="username" placeholder="用户名" />
+            </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-control nzErrorTip="Please input your username!">
+            <nz-input-group nzPrefixIcon="mail">
+                <input type="text" nzSize="large" nz-input formControlName="email" placeholder="邮箱" />
+            </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-control nzErrorTip="Please input your Password!">
+            <nz-input-group nzPrefixIcon="lock">
+                <input type="password" nzSize="large" nz-input formControlName="password" placeholder="密码" />
+            </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-control nzErrorTip="Please input your Password!">
+            <nz-input-group nzPrefixIcon="lock">
+                <input type="password" nzSize="large" nz-input formControlName="passwordRepeat" placeholder="再次输入密码" />
+            </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-control>
+            我是
+            <nz-radio-group formControlName="accountType">
+                <label nz-radio nzValue="customer">消费者</label>
+                <label nz-radio nzValue="developer">开发者</label>
+            </nz-radio-group>
+        </nz-form-control>
+    </nz-form-item>
+    <button nz-button nzBlock="true" nzType="primary" (click)="signup()">注册</button>
+</form>

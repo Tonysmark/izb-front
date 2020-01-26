@@ -1,0 +1,40 @@
+<div class="v-header">
+    <div class="full-video-wrap">
+        <video src="../../../assets/footages/Footage-1.m4v" autoPlay="true" loop="true"></video>
+    </div>
+    <embed class="logo" routerLink="/home" src="../../../favicon.ico" type="" />
+    <a class="title" routerLink="/home">众包平台</a>
+    <div class="components-wrapper">
+        <div nz-row>
+            <!-- TODO: nzOffset 动态改变 0 7 14 -->
+            <div nz-col [nzOffset]="indexer[pageIndex].offset" nzSpan="10" class="components-content">
+                <div class="indecator indecator-left" *ngIf="indexer[pageIndex].offset != 0">
+                    <a (click)="changeIndex('back')" nzType="default" nzShape="circle">
+                        <i nz-icon nzType="left" nzTheme="outline"></i>
+                        {{ indexer[pageIndex - 1].name }}
+                    </a>
+                </div>
+
+                <div class="indecator indecator-right" *ngIf="indexer[pageIndex].offset != 14">
+                    <a (click)="changeIndex('push')" nzType="default" nzShape="circle">
+                        {{ indexer[pageIndex + 1].name }}
+                        <i nz-icon nzType="right" nzTheme="outline"></i>
+                    </a>
+                </div>
+                <div class="forms-wrapper">
+                    <div [ngSwitch]="indexer[pageIndex].offset">
+                        <div *ngSwitchCase="0">
+                            <app-signin (changeEvt)="changeIndex()"></app-signin>
+                        </div>
+                        <div *ngSwitchCase="7">
+                            <app-signup></app-signup>
+                        </div>
+                        <div *ngSwitchCase="14">
+                            <app-forget></app-forget>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

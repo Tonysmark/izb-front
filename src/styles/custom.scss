@@ -1,0 +1,71 @@
+/* You can add global styles to this file, and also import other style files */
+// paddings
+@for $i from 1 through 20 {
+    .pt-#{$i} {
+        padding-top: $i * 2px;
+    }
+}
+@for $i from 1 through 20 {
+    .pr-#{$i} {
+        padding-right: $i * 2px;
+    }
+}
+@for $i from 1 through 20 {
+    .pb-#{$i} {
+        padding-bottom: $i * 2px;
+    }
+}
+@for $i from 1 through 20 {
+    .pl-#{$i} {
+        padding-left: $i * 2px;
+    }
+}
+
+// margins
+@for $i from 1 through 20 {
+    .mt-#{$i} {
+        margin-top: $i * 2px;
+    }
+}
+@for $i from 1 through 20 {
+    .mr-#{$i} {
+        margin-right: $i * 2px;
+    }
+}
+@for $i from 1 through 20 {
+    .mb-#{$i} {
+        margin-bottom: $i * 2px;
+    }
+}
+@for $i from 1 through 20 {
+    .ml-#{$i} {
+        margin-left: $i * 2px;
+    }
+}
+// borders
+@for $i from 1 through 2 {
+    .bt-#{$i} {
+        border-top: $i * 2px solid #ccc;
+    }
+}
+@for $i from 1 through 2 {
+    .bb-#{$i} {
+        border-bottom: $i * 2px solid #ccc;
+    }
+}
+
+// width
+@for $i from 1 through 40 {
+    .width-#{$i} {
+        width: $i * 2px;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+.container {
+    margin: 30px auto;
+    min-height: 100vh;
+    width: 1600px;
+}

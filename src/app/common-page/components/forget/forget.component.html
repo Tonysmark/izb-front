@@ -1,0 +1,24 @@
+<div class="title">
+    <h1>忘记密码</h1>
+</div>
+<form nz-form [formGroup]="retrveForm" class="login-form">
+    <nz-form-item>
+        <nz-form-control nzErrorTip="Please input your username!">
+            <nz-input-group nzPrefixIcon="mail">
+                <input type="text" nzSize="large" nz-input formControlName="email" placeholder="邮箱" />
+            </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-control nzErrorTip="请输入验证码" nzExtra="我们会向您的邮箱发送一封含有验证码的邮件">
+            <div nz-row [nzGutter]="8">
+                <div nz-col nzSpan="12">
+                    <input nz-input placeholder="验证码" formControlName="verificationCode" />
+                </div>
+                <div nz-col nzSpan="12">
+                    <button nz-button>发送验证码</button>
+                </div>
+            </div>
+        </nz-form-control>
+    </nz-form-item>
+</form>

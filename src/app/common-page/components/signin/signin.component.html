@@ -1,0 +1,37 @@
+<div class="title">
+    <h1>登录账户</h1>
+</div>
+<form nz-form [formGroup]="signinForm" class="login-form">
+    <nz-form-item>
+        <nz-form-control nzErrorTip="Please input your username!">
+            <nz-input-group nzPrefixIcon="mail">
+                <input type="text" nzSize="large" nz-input formControlName="email" placeholder="邮箱" />
+            </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+        <nz-form-control nzErrorTip="Please input your Password!">
+            <nz-input-group nzPrefixIcon="lock">
+                <input type="password" nzSize="large" nz-input formControlName="password" placeholder="密码" />
+            </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-control>
+            <label nz-checkbox formControlName="remember"> <span>记住我</span></label>
+            <br />
+            没有账号？<a (click)="changeTo()">立即注册账号</a>
+        </nz-form-control>
+    </nz-form-item>
+    <button nz-button nzBlock="true" nzType="primary" (click)="signin()">登 录</button>
+    <nz-divider nzText="OR"></nz-divider>
+    <div nz-row nzType="flex" nzAlign="middle" nzJustify="space-around">
+        <div nz-col>
+            <embed class="width-20" src="../../../../assets/svgs/qq.svg" type="" />
+        </div>
+        <div nz-col>
+            <embed class="width-20" src="../../../../assets/svgs/wechat.svg" type="" />
+        </div>
+    </div>
+</form>

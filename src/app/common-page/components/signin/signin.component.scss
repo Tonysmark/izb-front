@@ -1,0 +1,17 @@
+.title {
+    margin-bottom: 20px;
+    h1 {
+        font-size: 40px;
+        position: relative;
+        &:after {
+            content: 'Login';
+            font-weight: 100;
+            position: absolute;
+            top: -68px;
+            left: 76px;
+            font-size: 100px;
+            color: rgba(0, 0, 0, 0.2);
+            text-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+        }
+    }
+}
