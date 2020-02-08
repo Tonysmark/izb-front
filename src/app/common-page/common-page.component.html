@@ -1,1 +1,30 @@
-<p>common-page works!</p>
+<header>
+    <div class="logo">
+        <img src="../../favicon.ico" alt="" />
+        <a href="">众包平台</a>
+    </div>
+    <div class="navigation">
+        <ul>
+            <li class="tab">
+              <a routerLink="/dev">开发者</a></li>
+            <li class="tab">
+              <a routerLink="/admin">后台管理</a></li>
+            <li class="tab">
+              <a routerLink="/c">基本用户</a></li>
+        </ul>
+    </div>
+    <div class="operation">
+        <span class="signup">
+            <!-- TODO: 带的data不一样 -->
+            <button nz-button nzType="link" routerLink="/joinin">
+                登 录
+            </button>
+        </span>
+        <span class="signin">
+            <button nz-button nzShape="round" nzType="primary" routerLink="/joinin">
+                注 册
+            </button>
+        </span>
+    </div>
+</header>
+<router-outlet></router-outlet>

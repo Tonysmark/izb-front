@@ -1,0 +1,25 @@
+.main-content {
+    height: 600px;
+    .subscribe > button {
+        margin-right: 30px;
+    }
+    .side-image {
+        text-align: center;
+        embed {
+            width: 80%;
+        }
+    }
+
+    .title {
+        margin-bottom: 20px;
+        h1 {
+            font-size: 40px;
+            margin: 0;
+        }
+    }
+}
+.stack-content {
+    .stack-logo {
+        height: 70px;
+    }
+}

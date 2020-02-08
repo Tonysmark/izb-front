@@ -1,0 +1,26 @@
+<div id="user">
+    <button nz-button nzType="link" nz-dropdown [nzDropdownMenu]="Alert" nzPlacement="bottomCenter">
+        <nz-badge nzDot>
+            <i nz-icon nzType="bell" nzTheme="outline"></i>
+        </nz-badge>
+    </button>
+    <nz-dropdown-menu #Alert="nzDropdownMenu">
+        <ul nz-menu>
+            <li nz-menu-item>1st menu item</li>
+            <li nz-menu-item>2nd menu item</li>
+            <li nz-menu-item>3rd menu item</li>
+        </ul>
+    </nz-dropdown-menu>
+    <nz-avatar nzIcon="user" nzSrc="//zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"></nz-avatar>
+    <span class="ml-5">{{ username }}</span>
+    <a class="ml-5 Info" nz-dropdown nzTrigger="click" [nzDropdownMenu]="Info">
+        <i nz-icon nzType="down"></i>
+    </a>
+    <nz-dropdown-menu #Info="nzDropdownMenu">
+        <ul nz-menu nzSelectable>
+            <li nz-menu-item>1st menu item</li>
+            <li nz-menu-item>2nd menu item</li>
+            <li nz-menu-item>3rd menu item</li>
+        </ul>
+    </nz-dropdown-menu>
+</div>

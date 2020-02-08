@@ -8,9 +8,10 @@ import { JoininComponent } from './joinin/joinin.component';
 import { SigninComponent } from './components/signin/signin.component';
 import { ForgetComponent } from './components/forget/forget.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-    declarations: [CommonPageComponent, JoininComponent, SigninComponent, ForgetComponent, SignupComponent],
+    declarations: [CommonPageComponent, JoininComponent, SigninComponent, ForgetComponent, SignupComponent, HomeComponent],
     imports: [CommonModule, CommonPageRoutingModule, SharedCoreModule],
 })
 export class CommonPageModule {}

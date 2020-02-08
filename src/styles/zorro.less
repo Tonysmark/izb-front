@@ -1,4 +1,5 @@
 @import '../../node_modules/ng-zorro-antd/ng-zorro-antd.less';
+// 修改颜色直接在这个文件里修改就行
 // The prefix to use on all css classes from ant.
 @ant-prefix: ant;
 
@@ -38,7 +39,7 @@
 // Background color for `<body>`
 @body-background: #fff;
 // Base background color for most components
-@component-background: #fff;
+@component-background: #fff; // #fff
 @font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue',
     Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 @code-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
@@ -244,7 +245,7 @@
 @grid-gutter-width: 0;
 
 // Layout
-@layout-body-background: #f0f2f5;
+@layout-body-background: #fff; // #f0f2f5
 @layout-header-background: #001529;
 @layout-footer-background: @layout-body-background;
 @layout-header-height: 64px;
@@ -257,7 +258,7 @@
 @layout-zero-trigger-width: 36px;
 @layout-zero-trigger-height: 42px;
 // Layout light theme
-@layout-sider-background-light: #fff;
+@layout-sider-background-light: #f0f2f5; // #fff
 @layout-trigger-background-light: #fff;
 @layout-trigger-color-light: @text-color;
 
@@ -391,7 +392,8 @@
 @menu-inline-toplevel-item-height: 40px;
 @menu-item-height: 40px;
 @menu-collapsed-width: 80px;
-@menu-bg: @component-background;
+// @menu-bg: @component-background;
+@menu-bg: #e5e6e7;
 @menu-popup-bg: @component-background;
 @menu-item-color: @text-color;
 @menu-highlight-color: @primary-color;

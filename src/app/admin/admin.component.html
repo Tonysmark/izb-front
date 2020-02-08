@@ -1,39 +1,58 @@
 <nz-layout>
-    <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
-        <div class="logo"></div>
-        <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
-            <li nz-submenu nzTitle="User" nzIcon="user">
+    <nz-sider nzTheme="light" nzCollapsible="true" [(nzCollapsed)]="isCollapsed">
+        <app-logo></app-logo>
+        <ul nz-menu nzTheme="light" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+            <li nzOpen="true" nz-submenu nzTitle="用户管理" nzIcon="user">
                 <ul>
-                    <li nz-menu-item>Tom</li>
-                    <li nz-menu-item>Bill</li>
-                    <li nz-menu-item>Alex</li>
+                    <li nz-menu-item>权限管理</li>
+                    <li nz-menu-item>账号管理</li>
                 </ul>
             </li>
-            <li nz-submenu nzTitle="Team" nzIcon="team">
+
+            <li nzOpen="true" nz-submenu nzTitle="数据报表" nzIcon="area-chart">
+                <ul>
+                    <li nz-menu-item>权限管理</li>
+                    <li nz-menu-item>账号管理</li>
+                </ul>
+            </li>
+
+            <li nzOpen="true" nz-submenu nzTitle="系统状态" nzIcon="cloud-server">
+                <ul>
+                    <li nz-menu-item>权限管理</li>
+                    <li nz-menu-item>账号管理</li>
+                </ul>
+            </li>
+            <li nzOpen="true" nz-submenu nzTitle="项目管理" nzIcon="team">
                 <ul>
                     <li nz-menu-item>Team 1</li>
                     <li nz-menu-item>Team 2</li>
                 </ul>
             </li>
-            <li nz-menu-item>
-                <i nz-icon nzType="file"></i>
-                <span>File</span>
+            <li nzOpen="true" nz-submenu nzTitle="反馈处理" nzIcon="alert">
+                <ul>
+                    <li nz-menu-item>Team 1</li>
+                    <li nz-menu-item>Team 2</li>
+                </ul>
             </li>
         </ul>
     </nz-sider>
     <nz-layout>
-        <nz-header>
-            <i class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'" (click)="isCollapsed = !isCollapsed"></i>
-        </nz-header>
+        <header class="header">
+            <div class="search">
+                <nz-input-group [nzSuffix]="suffixIconSearch">
+                    <input type="text" nz-input placeholder="开始搜索" />
+                </nz-input-group>
+                <ng-template #suffixIconSearch>
+                    <i nz-icon nzType="search"></i>
+                </ng-template>
+            </div>
+            <app-user></app-user>
+        </header>
         <nz-content>
-            <nz-breadcrumb>
-                <nz-breadcrumb-item>User</nz-breadcrumb-item>
-                <nz-breadcrumb-item>Bill</nz-breadcrumb-item>
-            </nz-breadcrumb>
             <div class="inner-content">
-                Bill is a cat.
+                <router-outlet></router-outlet>
             </div>
         </nz-content>
-        <nz-footer>Ant Design ©2019 Implement By Angular</nz-footer>
+        <app-footer> </app-footer>
     </nz-layout>
 </nz-layout>

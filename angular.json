@@ -39,7 +39,7 @@
             ],
             "styles": [
               "src/styles/zorro.less",
-              "src/styles/custom.scss"
+              "src/styles/style.scss"
             ],
             "scripts": []
           },

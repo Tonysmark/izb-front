@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+@import './util.scss';
+
+.text-center {
+    text-align: center;
+}
+.container {
+    margin: 30px auto;
+    min-height: 100vh;
+    width: 1600px;
+}

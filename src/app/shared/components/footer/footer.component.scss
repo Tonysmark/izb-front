@@ -1,0 +1,17 @@
+#footer {
+    padding: 50px;
+    background-color: #81ecec;
+    .title {
+        font-weight: bold;
+        font-size: 17px;
+        margin-bottom: 24px;
+    }
+    ul {
+        padding-left: 0;
+    }
+    ul > li {
+        line-height: 2;
+        font-size: 15px;
+        list-style: none;
+    }
+}
