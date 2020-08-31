@@ -2,33 +2,37 @@
     <nz-sider nzTheme="light" nzCollapsible="true" [(nzCollapsed)]="isCollapsed">
         <app-logo></app-logo>
         <ul nz-menu nzTheme="light" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
-            <li nzOpen="true" nz-submenu nzTitle="用户管理" nzIcon="user">
+            <li nzOpen="true" nz-submenu nzTitle="基本信息" nzIcon="user">
                 <ul>
-                    <li nz-menu-item>权限管理</li>
-                    <li nz-menu-item>账号管理</li>
+                    <li nz-menu-item>
+                        <a routerLink="user">用户管理</a>
+                    </li>
+                    <li nz-menu-item>
+                        <a routerLink="role">角色管理</a>
+                    </li>
                 </ul>
             </li>
 
-            <li nzOpen="true" nz-submenu nzTitle="数据报表" nzIcon="area-chart">
+            <li nzOpen="true" nz-submenu nzTitle="站内管理" nzIcon="area-chart">
                 <ul>
-                    <li nz-menu-item>权限管理</li>
-                    <li nz-menu-item>账号管理</li>
+                    <li nz-menu-item>站内通知</li>
+                    <li nz-menu-item>问题处理</li>
                 </ul>
             </li>
 
-            <li nzOpen="true" nz-submenu nzTitle="系统状态" nzIcon="cloud-server">
+            <li nzOpen="true" nz-submenu nzTitle="还有我" nzIcon="cloud-server">
                 <ul>
                     <li nz-menu-item>权限管理</li>
                     <li nz-menu-item>账号管理</li>
                 </ul>
             </li>
-            <li nzOpen="true" nz-submenu nzTitle="项目管理" nzIcon="team">
+            <li nzOpen="true" nz-submenu nzTitle="还有我" nzIcon="team">
                 <ul>
                     <li nz-menu-item>Team 1</li>
                     <li nz-menu-item>Team 2</li>
                 </ul>
             </li>
-            <li nzOpen="true" nz-submenu nzTitle="反馈处理" nzIcon="alert">
+            <li nzOpen="true" nz-submenu nzTitle="看我干啥" nzIcon="alert">
                 <ul>
                     <li nz-menu-item>Team 1</li>
                     <li nz-menu-item>Team 2</li>
@@ -37,7 +41,7 @@
         </ul>
     </nz-sider>
     <nz-layout>
-        <header class="header">
+        <!-- <header class="header">
             <div class="search">
                 <nz-input-group [nzSuffix]="suffixIconSearch">
                     <input type="text" nz-input placeholder="开始搜索" />
@@ -47,12 +51,12 @@
                 </ng-template>
             </div>
             <app-user></app-user>
-        </header>
+        </header> -->
         <nz-content>
             <div class="inner-content">
                 <router-outlet></router-outlet>
             </div>
         </nz-content>
-        <app-footer> </app-footer>
+        <!-- <app-footer> </app-footer> -->
     </nz-layout>
 </nz-layout>

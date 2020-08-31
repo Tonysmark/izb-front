@@ -1,3 +1,10 @@
+.home-container{
+  .red-circle{
+    position: relative;
+    left: 100px;;
+    animation: upside-down 5s 1s ease-in infinite alternate;
+  }
+}
 .main-content {
     height: 600px;
     .subscribe > button {
@@ -20,6 +27,11 @@
 }
 .stack-content {
     .stack-logo {
-        height: 70px;
+        box-sizing: border-box;
+        height: 100px;
+        width: 100px;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.02);
+        border-radius: 50px;
     }
 }

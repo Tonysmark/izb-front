@@ -1,0 +1,70 @@
+<div class="wrapper">
+    <app-dashboard></app-dashboard>
+    <nz-card class="mt-20">
+        <nz-row class="mb-10">
+            <nz-col nzSpan="6">
+                <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
+                    <input type="text" nz-input placeholder="input search text" />
+                </nz-input-group>
+                <ng-template #suffixIconButton>
+                    <button nz-button nzType="primary" nzSearch><i nz-icon nzType="search"></i></button>
+                </ng-template>
+            </nz-col>
+        </nz-row>
+
+        <nz-tabset>
+            <nz-tab nzTitle="活跃用户">
+                <nz-table #basicTable [nzData]="dataset">
+                    <thead>
+                        <tr>
+                            <th>用户名</th>
+                            <th>email</th>
+                            <th>登录时间</th>
+                            <th>更新时间</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let data of basicTable.data">
+                            <td><nz-avatar nzIcon="user" nzSrc="{{ data.icon }}"></nz-avatar> {{ data.username }}</td>
+                            <td>{{ data.email }}</td>
+                            <td>{{ data.create_time | date }}</td>
+                            <td>{{ data.update_time | date }}</td>
+                            <td>
+                                <a>Action</a>
+                                <nz-divider nzType="vertical"></nz-divider>
+                                <a>Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </nz-table>
+            </nz-tab>
+            <!-- <nz-tab nzTitle="拉黑用户">
+                <nz-table #basicTable [nzData]="dataset">
+                    <thead>
+                        <tr>
+                            <th>用户名</th>
+                            <th>email</th>
+                            <th>登录时间</th>
+                            <th>拉黑时间</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let data of basicTable.data">
+                            <td><nz-avatar nzIcon="user" style="background-color:#87d068;"></nz-avatar> {{ data.username }}</td>
+                            <td>{{ data.email }}</td>
+                            <td>{{ data.create_time | date }}</td>
+                            <td>{{ data.update_time | date }}</td>
+                            <td>
+                                <a>Action 一 {{ data.username }}</a>
+                                <nz-divider nzType="vertical"></nz-divider>
+                                <a>Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </nz-table>
+            </nz-tab> -->
+        </nz-tabset>
+    </nz-card>
+</div>

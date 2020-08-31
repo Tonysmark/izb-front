@@ -10,7 +10,7 @@ import { AuthInterceptorService } from './auth-interceptor.service';
  */
 @NgModule({
     providers: [
-        { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true },
+        // { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true },
         { provide: NZ_I18N, useValue: zh_CN },
     ],
 })

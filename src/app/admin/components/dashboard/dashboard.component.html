@@ -1,0 +1,54 @@
+<nz-row nzType="flex" nzAlign="middle" nzJustify="space-between" nzGutter="48">
+    <nz-col nzSpan="6">
+        <nz-card>
+            <nz-statistic
+                [nzValue]="11.28 | number: '1.0-2'"
+                [nzTitle]="'今日用户增长'"
+                [nzPrefix]="prefixTplOne"
+                [nzSuffix]="'%'"
+                [nzValueStyle]="{ color: '#3F8600' }"
+            >
+            </nz-statistic>
+            <ng-template #prefixTplOne><i nz-icon nzType="arrow-up"></i></ng-template>
+        </nz-card>
+    </nz-col>
+    <nz-col nzSpan="6">
+        <nz-card>
+            <nz-statistic
+                [nzValue]="11.28 | number: '1.0-2'"
+                [nzTitle]="'同比用户下降'"
+                [nzPrefix]="prefixTplOne"
+                [nzSuffix]="'%'"
+                [nzValueStyle]="{ color: '#3F8600' }"
+            >
+            </nz-statistic>
+            <ng-template #prefixTplOne><i nz-icon nzType="arrow-up"></i></ng-template>
+        </nz-card>
+    </nz-col>
+    <nz-col nzSpan="6">
+        <nz-card>
+            <nz-statistic
+                [nzValue]="11.28 | number: '1.0-2'"
+                [nzTitle]="'用户注册量'"
+                [nzPrefix]="prefixTplOne"
+                [nzSuffix]="'%'"
+                [nzValueStyle]="{ color: '#3F8600' }"
+            >
+            </nz-statistic>
+            <ng-template #prefixTplOne><i nz-icon nzType="arrow-up"></i></ng-template>
+        </nz-card>
+    </nz-col>
+    <nz-col nzSpan="6">
+        <nz-card>
+            <nz-statistic
+                [nzValue]="11.28 | number: '1.0-2'"
+                [nzTitle]="'用户活跃度'"
+                [nzPrefix]="prefixTplOne"
+                [nzSuffix]="'%'"
+                [nzValueStyle]="{ color: '#3F8600' }"
+            >
+            </nz-statistic>
+            <ng-template #prefixTplOne><i nz-icon nzType="arrow-up"></i></ng-template>
+        </nz-card>
+    </nz-col>
+</nz-row>

@@ -9,8 +9,11 @@ header.header {
 }
 
 .inner-content {
-    margin: 24px;
-    padding: 24px;
+    // margin: 24px;
+    // padding: 24px;
     background: #fff;
     min-height: 100vh;
+}
+.ant-menu {
+    background: none;
 }

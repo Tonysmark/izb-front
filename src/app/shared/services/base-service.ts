@@ -2,15 +2,13 @@ import { HttpParams, HttpClient, HttpErrorResponse } from '@angular/common/http'
 import { isDevMode, Injector } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { CookieService } from 'ngx-cookie-service';
-
 import { NzModalService, NzMessageService } from 'ng-zorro-antd';
 
 import { throwError } from 'rxjs';
 
 export class BaseService {
     protected baseApi = isDevMode() ? 'http://localhost:8080' : '';
-    protected cookieService: CookieService;
+
     protected http: HttpClient;
     protected router: Router;
 
@@ -19,7 +17,6 @@ export class BaseService {
     public nzMessageService: NzMessageService;
 
     constructor(protected injector: Injector) {
-        this.cookieService = injector.get(CookieService);
         this.http = injector.get(HttpClient);
         this.router = injector.get(Router);
         this.nzMessageService = injector.get(NzMessageService);
@@ -27,10 +24,10 @@ export class BaseService {
     }
 
     protected extractData(res: any) {
-        const status = Number(res.status);
-        if (status !== 200) {
-            throw new HttpErrorResponse({ error: { message: res.message }, status: res.code });
-        }
+        // const status = Number(res.status);
+        // if (status !== 200) {
+        //     throw new HttpErrorResponse({ error: { message: res.message }, status: res.code });
+        // }
         return res['result'] || res['data'];
     }
     protected handleError(errorResponse: HttpErrorResponse) {

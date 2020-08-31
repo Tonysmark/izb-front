@@ -1,14 +1,6 @@
 #logo {
-    margin: 15px;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    .icon {
-        grid-row: 1/3;
-        width: 30px;
-        align-self: center;
+    margin-left: 20px;
+    img {
+        width: 60%;
     }
-    .title {
-        font-weight: bold;
-    }
-
-  }
+}
